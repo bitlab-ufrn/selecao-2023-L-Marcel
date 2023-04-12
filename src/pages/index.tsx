@@ -3,7 +3,12 @@ import styles from "../styles/page.module.css";
 import { OffenseDetector } from "../services/security/OffenseDetector";
 import { specialJoin } from "../utils/specialJoin";
 import { Roboto } from "next/font/google";
-import Head from "next/head";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Detector de conteúdo ofensivo",
+  description: "Um sistema para detectar conteúdo ofensivo em um determinado texto."
+};
 
 const inter = Roboto({ 
   subsets: ["latin"], 
@@ -26,9 +31,6 @@ function MainPage() {
 
   return (
     <main className={mainContainerClassName}>
-      <Head>
-        <title>Detector de conteúdo ofensivo</title>
-      </Head>
       <h1>Detector de conteúdo ofensivo</h1>
       <h4>Por: <a href="https://github.com/l-marcel" target="__blank__">Lucas Marcel Silva de Brito</a></h4>
       <textarea 
@@ -38,7 +40,7 @@ function MainPage() {
       {hasOffense && <p>
         Nós detectamos uma linguagem ofensiva em seu texto.
         Por favor, verifique o uso 
-        dessa{pluralOfWords} palavra{pluralOfWords}/frase{pluralOfWords}: {specialJoin(offenses)}.
+        desse{pluralOfWords} termo{pluralOfWords}: {specialJoin(offenses)}.
       </p>}
     </main>
   );

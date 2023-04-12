@@ -20,7 +20,7 @@ export class OffenseDetector {
 
     piii.filter(text);
 
-    //fica um pouco mais lento, mas é porque o PIII é uma biblioteca
+    //Fica um pouco mais lento, mas é porque o PIII é uma biblioteca
     //antiga e não suporta espaços nos filtros, então decidi fazer assim
     //mesmo para adicionar mais algumas ofensas.
     const formattedText = " " + text.toLowerCase() + " ";
