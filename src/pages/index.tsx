@@ -24,9 +24,6 @@ export default function MainPage() {
 
   const mainContainerClassName = [inter.className, styles.container].join(" ");
 
-  //I made a kind of unnecessary commit because I thought it was 
-  //possible to use a new Next feature to configure the page's metadata. 
-  //But it is only available in the app directory.
   return (
     <>
       <Head>
