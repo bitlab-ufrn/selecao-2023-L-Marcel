@@ -3,19 +3,14 @@ import styles from "../styles/page.module.css";
 import { OffenseDetector } from "../services/security/OffenseDetector";
 import { specialJoin } from "../utils/specialJoin";
 import { Roboto } from "next/font/google";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Detector de conteúdo ofensivo",
-  description: "Um sistema para detectar conteúdo ofensivo em um determinado texto."
-};
+import Head from "next/head";
 
 const inter = Roboto({ 
   subsets: ["latin"], 
   weight: ["300", "400","500"] 
 });
 
-function MainPage() {
+export default function MainPage() {
   const [offenses, setOffenses] = useState([]);
 
   function onChangeTextarea(event: ChangeEvent<HTMLTextAreaElement>) {
@@ -29,21 +24,28 @@ function MainPage() {
 
   const mainContainerClassName = [inter.className, styles.container].join(" ");
 
+  //I made a kind of unnecessary commit because I thought it was 
+  //possible to use a new Next feature to configure the page's metadata. 
+  //But it is only available in the app directory.
   return (
-    <main className={mainContainerClassName}>
-      <h1>Detector de conteúdo ofensivo</h1>
-      <h4>Por: <a href="https://github.com/l-marcel" target="__blank__">Lucas Marcel Silva de Brito</a></h4>
-      <textarea 
-        placeholder="Digite o seu texto aqui e verificaremos se ele é ou não um texto ofensivo." 
-        onChange={onChangeTextarea}
-      />
-      {hasOffense && <p>
-        Nós detectamos uma linguagem ofensiva em seu texto.
-        Por favor, verifique o uso 
-        desse{pluralOfWords} termo{pluralOfWords}: {specialJoin(offenses)}.
-      </p>}
-    </main>
+    <>
+      <Head>
+        <title>Detector de conteúdo ofensivo</title>
+        <meta name="description" content="Um sistema para detectar conteúdo ofensivo em um determinado texto."/>
+      </Head>
+      <main className={mainContainerClassName}>
+        <h1>Detector de conteúdo ofensivo</h1>
+        <h4>Por: <a href="https://github.com/l-marcel" target="__blank__">Lucas Marcel Silva de Brito</a></h4>
+        <textarea 
+          placeholder="Digite o seu texto aqui e verificaremos se ele é ou não um texto ofensivo." 
+          onChange={onChangeTextarea}
+        />
+        {hasOffense && <p>
+          Nós detectamos uma linguagem ofensiva em seu texto.
+          Por favor, verifique o uso 
+          desse{pluralOfWords} termo{pluralOfWords}: {specialJoin(offenses)}.
+        </p>}
+      </main>
+    </>
   );
 };
-
-export default MainPage;
