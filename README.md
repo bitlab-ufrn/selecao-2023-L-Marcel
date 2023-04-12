@@ -34,3 +34,7 @@ Você está livre para utilizar qualquer linguagem ou ferramenta.
 1. Adicione a esse README instruções de acesso ao seu sistema
 
 ## Acesso
+A demonstração está disponível em: https://selecao-2023-l-marcel.vercel.app/
+
+## Observações
+É possível que algumas ofensas não tenham sido registradas. Foi utilizado uma biblioteca que já vem com algumas ofensas registradas como base, mas eu incluí algumas próprias.
