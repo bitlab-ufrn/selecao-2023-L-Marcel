@@ -26,9 +26,9 @@ export default function MainPage() {
   const hasOffense = offenses.length >= 1;
   const hasManyOffenses = offenses.length >= 2;
   const warning = hasManyOffenses? 
-    ("Nós detectamos uma linguagem ofensiva em seu texto." + 
+    ("Nós detectamos uma linguagem ofensiva em seu texto. " + 
     "Por favor, verifique o uso desses termos"):
-    ("Nós detectamos uma linguagem ofensiva em seu texto." + 
+    ("Nós detectamos uma linguagem ofensiva em seu texto. " + 
     "Por favor, verifique o uso desse termo");
 
   return (
