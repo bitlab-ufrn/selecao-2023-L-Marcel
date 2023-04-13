@@ -1,7 +1,6 @@
 import piiiFilters from "piii-filters";
 import Piii from "piii";
-import filters from "../../database/filters.json";
-import specialFilters from "../../database/special-filters.json";
+import filters from "../database/filters.json";
 
 export class OffenseDetector {
   static verify(text: string) {
@@ -10,7 +9,7 @@ export class OffenseDetector {
     const piii = new Piii({
       filters: [
         ...Object.values(piiiFilters),
-        ...Object.values(filters)
+        ...filters.offenses
       ],
       censor: (badWord: string) => {
         offenses.add(badWord.toLowerCase());
@@ -24,7 +23,7 @@ export class OffenseDetector {
     //antiga e não suporta espaços nos filtros, então decidi fazer assim
     //mesmo para adicionar mais algumas ofensas.
     const formattedText = " " + text.toLowerCase() + " ";
-    specialFilters.map(
+    filters.offensesWithSpace.map(
       offense => {
         if(formattedText.includes(offense)) {
           offenses.add(offense);

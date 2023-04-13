@@ -7,7 +7,7 @@ export function specialJoin(
     return array.join(join);
   };
 
-  const lastItem = array[array.length - 1];
+  const lastItem = array.at(-1);
   array.pop();
 
   return array.join(join) + joinAtLast + lastItem

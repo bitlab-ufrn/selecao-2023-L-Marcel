@@ -1,51 +1,41 @@
 {
-  "fodase": [
+  "offensesWithSpace": [
+    "filho da mãe",
+    "filho da mae"
+  ],
+  "offenses": [
     [
-      "fds"
+      "pqp",
+      "merda",
+      "puteiro",
+      "fdp",
+      "pnc",
+      "fds",
+      "krl"
     ],
     [
       "foda",
       [
         "se"
       ]
-    ]
-  ],
-  "paunocu": [
+    ],
     [
-      "pnc"
-    ], [
-      "pau",
+      "cana",
       [
-        "nocu"
+        "lha",
+        "lhice",
+        "lhada",
+        "lhismo"
       ]
-    ]
-  ],
-  "fdp": [
+    ],
     [
-      "fdp"
-    ]
-  ],
-  "canalha": [
-    "cana",
-    [
-      "lha",
-      "lhice",
-      "lhada",
-      "lhismo"
-    ]
-  ],
-  "puteiro": [
-    "puteiro"
-  ],
-  "carai": [
-    "ca",
-    [
-      "rai",
-      "ralho",
-      "cete"
-    ]
-  ],
-  "karai": [
+      "ca",
+      [
+        "rai",
+        "ralho",
+        "cete"
+      ]
+    ],
     [
       "ka",
       [
@@ -53,23 +43,78 @@
         "ralho",
         "cete"
       ]
-    ]
-  ],
-  "pqp": [
-    "pqp"
-  ],
-  "merda": [
-    "merda"
-  ],
-  "viad": [
-    "viad",
+    ],
     [
-      "o",
-      "inho",
-      "inha",
-      "a",
-      "ice",
-      "isse"
+      "viad",
+      [
+        "o",
+        "inho",
+        "inha",
+        "a",
+        "ice",
+        "isse"
+      ]
+    ],
+    [
+      "fud",
+      [
+        "ido",
+        "idos",
+        "ida",
+        "idas", 
+        "endo",
+        "a",
+        "ais",
+        "am",
+        "amo",
+        "amos",
+        "as",
+        "e",
+        "ei",
+        "eis",
+        "em",
+        "emo",
+        "emos",
+        "endo",
+        "er",
+        "era",
+        "eram",
+        "eramo",
+        "eramos",
+        "erao",
+        "eras",
+        "erdes",
+        "erei",
+        "ereis",
+        "erem",
+        "eremos",
+        "eres",
+        "eria",
+        "eriam",
+        "eriamos",
+        "erias",
+        "erieis",
+        "ermo",
+        "ermos",
+        "es",
+        "esse",
+        "esseis",
+        "essem",
+        "essemos",
+        "esses",
+        "este",
+        "estes",
+        "eu",
+        "i",
+        "ia",
+        "iam",
+        "iamo",
+        "iamos",
+        "ias",
+        "iei",
+        "ieis",
+        "o"
+      ]
     ]
   ]
 }
